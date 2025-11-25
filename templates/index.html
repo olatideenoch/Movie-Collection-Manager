@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
-{% block title %}My Top 10 Movies{% endblock %}
+{% block title %}Movie Collection Manager{% endblock %}
 
 {% block content %}
 <div class="container">
-  <h1 class="heading">My Top 10 Movies</h1>
-  <p class="description">These are my all-time favourite movies.</p>
+  <h1 class="heading">Movie Collection Manager</h1>
+  <p class="description">A personal database for all your favorite films</p>
   {% for movie in movies %} 
   <div class="card" >
     <div class="front" style="background-image: url('{{movie.img_url}}');">
