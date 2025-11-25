@@ -21,8 +21,8 @@ class Base(DeclarativeBase):
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
 
-db = SQLAlchemy(model_class=Base)
-db.init_app(app)
+db = SQLAlchemy(app)
+
 
 
 # CREATE TABLE
@@ -148,4 +148,4 @@ def find_movie():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
